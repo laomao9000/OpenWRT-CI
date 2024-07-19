@@ -38,7 +38,7 @@ fi
 
 #高通平台锁定512M内存
 if [[ $WRT_TARGET == *"QCA"* ]]; then
-	echo "CONFIG_ATH11K_MEM_PROFILE_1G=n" >> ./.config
+	echo "CONFIG_ATH11K_MEM_PROFILE_1G=y" >> ./.config
 	echo "CONFIG_ATH11K_MEM_PROFILE_256M=y" >> ./.config
 fi
 
@@ -47,7 +47,7 @@ if [[ $WRT_REPO == *"lede"* ]]; then
 	echo "CONFIG_PACKAGE_luci-app-openclash=y" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-turboacc=y" >> ./.config
 else
-	echo "CONFIG_PACKAGE_luci-app-openclash=y" >> ./.config
-	echo "CONFIG_PACKAGE_luci-app-turboacc=y" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-openclash=n" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-turboacc=n" >> ./.config
 
 fi
