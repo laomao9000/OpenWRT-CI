@@ -39,7 +39,7 @@ fi
 #高通平台锁定512M内存
 if [[ $WRT_TARGET == *"IPQ"* ]]; then
 	echo "CONFIG_ATH11K_MEM_PROFILE_1G=n" >> ./.config
-	echo "CONFIG_ATH11K_MEM_PROFILE_512M=y" >> ./.config
+	echo "CONFIG_ATH11K_MEM_PROFILE_256M=y" >> ./.config
 fi
 
 #科学插件设置
@@ -51,5 +51,5 @@ if [[ $WRT_REPO == *"lede"* ]]; then
 else
 	echo "CONFIG_PACKAGE_luci=y" >> ./.config
 	echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
-	echo "CONFIG_PACKAGE_luci-app-homeproxy=y" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-homeproxy=n" >> ./.config
 fi
